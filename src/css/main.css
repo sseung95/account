@@ -1,0 +1,301 @@
+:root {
+  --color-orange: #ff5f00;
+  --color-yellow: #feb700;
+  --color-blue: #55acee;
+  --color-green: #005f59;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.app-wrapper {
+  margin: 0 auto;
+  width: 375px;
+  height: 812px;
+  background-color: #eeece5;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-status {
+  height: 44px;
+  margin-bottom: 12px;
+}
+
+.mobile-status img {
+  width: 100%;
+}
+
+/* header */
+.app-wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  margin-bottom: 33px;
+}
+
+.app-wrapper header .user {
+  width: 43px;
+  height: 43px;
+}
+.app-wrapper header .user .user__img {
+  width: 100%;
+}
+
+.app-wrapper header .header__title {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.action-btns {
+  display: flex;
+  gap: 18px;
+}
+
+/* main */
+.account-info {
+  text-align: center;
+}
+.account-info__card {
+  font-weight: 500;
+  width: 279px;
+  padding: 14px 0 6px 0;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+  border-radius: 12px;
+}
+.account-info__number-cover {
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: '. number btn';
+  font-size: 14px;
+}
+
+.account-info__card .account-info__number-cover .account-info__number {
+  color: #858585;
+  grid-area: number;
+}
+
+.transfer-btn {
+  grid-area: btn;
+}
+
+.account-info__balance-cover {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.account-info__balance-cover .account-info__balance {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.account-info__chart-cover {
+  display: flex;
+  margin-left: 32px;
+  align-items: center;
+  gap: 7px;
+}
+
+.chart-btn img {
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+}
+
+.account-info__summary {
+  font-size: 14px;
+  color: #858585;
+}
+
+.loan-ad {
+  margin: 24px 0 21px 0;
+  font-size: 14px;
+}
+.loan-ad__btn {
+  text-decoration: underline;
+}
+
+.account-history {
+  min-height: 637px;
+  padding: 23px 37px;
+  background: #f5f5f5;
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+  transition: all 0.8s;
+}
+
+.up-btn {
+  position: absolute;
+  left: 43.2%;
+  top: -5px;
+  padding: 0 5px 5px 5px;
+  margin-bottom: 5px;
+}
+.up-btn > span {
+  display: inline-block;
+  width: 48px;
+  height: 2.15px;
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.banks-cover {
+  margin-left: -7px;
+  overflow: auto;
+  margin-bottom: 16px;
+}
+.banks-cover::-webkit-scrollbar {
+  display: none;
+}
+.banks {
+  display: flex;
+  gap: 13px;
+  font-size: 12px;
+  /* TODO: width 자바스크립트로 지정해주기 */
+  width: 455px;
+}
+.bank {
+  padding: 5px 13px;
+  width: 162px;
+  height: 47px;
+  background: #dadada;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.bank:nth-child(1) {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-orange) 0%,
+    var(--color-orange) 60%,
+    transparent 60%
+  );
+}
+.bank:nth-child(2) {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-yellow) 0%,
+    var(--color-yellow) 70%,
+    transparent 70%
+  );
+}
+
+/* 의민이 용돈 */
+.account-history--2 .bank:nth-child(1) {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-blue) 0%,
+    var(--color-blue) 60%,
+    transparent 60%
+  );
+}
+.account-history--2 .bank:nth-child(2) {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-green) 0%,
+    var(--color-green) 70%,
+    transparent 70%
+  );
+}
+/*  */
+
+.banks__add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-orange);
+}
+.banks__add img {
+  width: 24px;
+  height: 24px;
+}
+
+.expense-view {
+  height: 300px;
+  overflow: auto;
+}
+.expense-view::-webkit-scrollbar {
+  display: none;
+}
+.expense-cover > div + div {
+  margin-top: 38px;
+}
+.expense__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.expense__date {
+  font-weight: 700;
+  font-size: 14px;
+}
+.expense__total {
+  font-size: 14px;
+  color: #b4b4b4;
+}
+.expense__list {
+  font-size: 18px;
+  font-weight: 300;
+  color: #444444;
+}
+.expense__list > li + li {
+  margin-top: 8px;
+}
+.expense__item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 5px 0;
+}
+.income {
+  color: var(--color-orange);
+}
+
+/* nav */
+nav {
+  position: absolute;
+  bottom: 0;
+  width: 375px;
+  height: 76px;
+  background: linear-gradient(163.63deg, #00bdb2 11.35%, #c4e7b8 139.96%);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  z-index: 1;
+}
+nav > button {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

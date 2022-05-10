@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body>
+    <div class="app-wrapper swiper">
+      <div class="mobile-status">
+        <img src="./src/images/iphone_status.png" alt="" />
+      </div>
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <header>
+            <div class="user">
+              <a href="#" class="user__img-cover">
+                <img
+                  class="user__img"
+                  src="./src/images/avata.png"
+                  alt="User Photo"
+                />
+              </a>
+            </div>
+            <h2 class="header__title"></h2>
+            <ul class="action-btns">
+              <li class="action-btn-cover">
+                <a href="#" class="action-btn">
+                  <img
+                    src="./src/images/payment.svg"
+                    alt=""
+                    class="action-btn__img"
+                  />
+                </a>
+              </li>
+              <li class="action-btn-cover">
+                <a href="#" class="action-btn">
+                  <img
+                    src="./src/images/search.svg"
+                    alt=""
+                    class="action-btn__img"
+                  />
+                </a>
+              </li>
+            </ul>
+          </header>
+
+          <main>
+            <section class="account-info">
+              <div class="account-info__card">
+                <div class="account-info__number-cover">
+                  <span class="account-info__number"></span>
+                  <button class="transfer-btn">이체</button>
+                </div>
+                <div class="account-info__balance-cover">
+                  <span class="account-info__balance">0</span>
+                  <span>원</span>
+                </div>
+                <div class="account-info__chart-cover">
+                  <div class="account-info__chart">
+                    <img src="./src/images/chart_bar.svg" alt="" />
+                  </div>
+                  <button class="chart-btn">
+                    <img src="./src/images/card_chart.svg" alt="" />
+                  </button>
+                </div>
+                <div class="account-info__summary">5일 동안 210,000원 남음</div>
+              </div>
+              <div class="loan-ad">
+                <span>지금 낮은 생활대출을 신청하세요!</span>
+                <a href="#" class="loan-ad__btn">Go</a>
+              </div>
+            </section>
+
+            <section class="account-history">
+              <button class="up-btn">
+                <span></span>
+              </button>
+              <div class="banks-cover">
+                <ul class="banks">
+                  <li class="banks__add">
+                    <img src="./src/images/plus.svg" alt="" />
+                    <p>저금통 만들기</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="expense-view">
+                <div class="expense-cover"></div>
+              </div>
+            </section>
+          </main>
+        </div>
+
+        <div class="swiper-slide">
+          <header>
+            <div class="user">
+              <a href="#" class="user__img-cover">
+                <img
+                  class="user__img"
+                  src="./src/images/avata2.png"
+                  alt="User Photo"
+                />
+              </a>
+            </div>
+            <h2 class="header__title">의민이 용돈</h2>
+            <ul class="action-btns">
+              <li class="action-btn-cover">
+                <a href="#" class="action-btn">
+                  <img
+                    src="./src/images/payment.svg"
+                    alt=""
+                    class="action-btn__img"
+                  />
+                </a>
+              </li>
+              <li class="action-btn-cover">
+                <a href="#" class="action-btn">
+                  <img
+                    src="./src/images/search.svg"
+                    alt=""
+                    class="action-btn__img"
+                  />
+                </a>
+              </li>
+            </ul>
+          </header>
+
+          <main>
+            <section class="account-info">
+              <div class="account-info__card">
+                <div class="account-info__number-cover">
+                  <span class="account-info__number">23-232117-34773</span>
+                  <button class="transfer-btn">이체</button>
+                </div>
+                <div class="account-info__balance-cover">
+                  <span class="account-info__balance">440,000</span>
+                  <span>원</span>
+                </div>
+                <div class="account-info__chart-cover">
+                  <div class="account-info__chart">
+                    <img src="./src/images/chart_bar2.svg" alt="" />
+                  </div>
+                  <button class="chart-btn">
+                    <img src="./src/images/card_chart.svg" alt="" />
+                  </button>
+                </div>
+                <div class="account-info__summary">5일 동안 210,000원 남음</div>
+              </div>
+              <div class="loan-ad">
+                <span>지금 낮은 생활대출을 신청하세요!</span>
+                <a href="#" class="loan-ad__btn">Go</a>
+              </div>
+            </section>
+
+            <section class="account-history account-history--2">
+              <button class="up-btn">
+                <span></span>
+              </button>
+              <div class="banks-cover">
+                <ul class="banks">
+                  <li class="bank">
+                    <div class="bank__title">게임기^^</div>
+                    <div class="bank__balance">842,200원</div>
+                  </li>
+                  <li class="bank">
+                    <div class="bank__title">기부실천!</div>
+                    <div class="bank__balance">142,200원</div>
+                  </li>
+                  <li class="banks__add">
+                    <img src="./src/images/plus.svg" alt="" />
+                    <p>저금통 만들기</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="expense-view">
+                <div class="expense-cover">
+                  <div class="expense">
+                    <div class="expense__header">
+                      <span class="expense__date">오늘</span>
+                      <span class="expense__total">127,600원 지출</span>
+                    </div>
+                    <ul class="expense__list">
+                      <li class="expense__item">
+                        <span class="expense__name">미스터피자</span>
+                        <span class="expense__price">32,000</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">택시</span>
+                        <span class="expense__price">4,800</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">이마트</span>
+                        <span class="expense__price">86,000</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">스타벅스</span>
+                        <span class="expense__price">4,800</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">전길수</span>
+                        <span class="expense__price income">+ 20,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="expense">
+                    <div class="expense__header">
+                      <span class="expense__date">어제</span>
+                      <span class="expense__total">71,600원 지출</span>
+                    </div>
+                    <ul class="expense__list">
+                      <li class="expense__item">
+                        <span class="expense__name">CU</span>
+                        <span class="expense__price">8,900</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">김경남</span>
+                        <span class="expense__price income">+ 31,000</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">애슐리</span>
+                        <span class="expense__price">31,000</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">교보문고</span>
+                        <span class="expense__price">4,800</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">전길수</span>
+                        <span class="expense__price income">+ 20,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="expense">
+                    <div class="expense__header">
+                      <span class="expense__date">2일전</span>
+                      <span class="expense__total">71,600원 지출</span>
+                    </div>
+                    <ul class="expense__list">
+                      <li class="expense__item">
+                        <span class="expense__name">CU</span>
+                        <span class="expense__price">8,900</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">김경남</span>
+                        <span class="expense__price income">+ 31,000</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">애슐리</span>
+                        <span class="expense__price">31,000</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">교보문고</span>
+                        <span class="expense__price">4,800</span>
+                      </li>
+                      <li class="expense__item">
+                        <span class="expense__name">전길수</span>
+                        <span class="expense__price income">+ 20,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav-btn">
+          <img src="./src/images/nav_home.svg" alt="home" />
+        </button>
+        <button class="nav-btn">
+          <img src="./src/images/nav_arrow.svg" alt="" />
+        </button>
+        <button class="nav-btn">
+          <img src="./src/images/nav_message.svg" alt="" />
+        </button>
+        <button class="nav-btn">
+          <img src="./src/images/nav_more.svg" alt="" />
+        </button>
+      </nav>
+    </div>
+
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
