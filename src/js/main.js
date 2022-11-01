@@ -142,31 +142,42 @@ const accountObj = {
   ],
 };
 
+const initialMousePos = { x: 0, y: 0 }; // 드래그 시작점 마우스 포인터 위치
+const offset = { x: 0, y: 0 }; // 이동할 거리
+
 ////////////////////////////////////////
 // 이벤트
 ////////////////////////////////////////
 upBtns.forEach((upBtn) => {
-  upBtn.addEventListener('click', (e) => {
+  upBtn.addEventListener('mousedown', (e) => {
     // 계좌가 여러개이므로 해당 계좌 내에서 요소를 찾기위해서..?
-    const accountHistory = e.target.closest('.account-history');
 
-    upStatus = !upStatus;
-    upStatus
-      ? moveHistory(accountHistory, -250, 550)
-      : moveHistory(accountHistory, 0, 300, 1);
+    // 1. 마우스 클릭하면 드래그 시작점 마우스 포인터 위치를 잡는다.
+    initialMousePos.x = e.clientX;
+    initialMousePos.y = e.clientY;
+
+    // 이벤트
+    document.addEventListener('mousemove', moveHistory);
+  });
+
+  // 마우스를 떼면 mousemove 이벤트 제거
+  document.addEventListener('mouseup', () => {
+    document.removeEventListener('mousemove', moveHistory);
   });
 });
 
 ////////////////////////////////////////
 // 함수
 ////////////////////////////////////////
-function moveHistory(historyEl, y, viewHeight, delaySec = 0) {
-  const expenseView = historyEl.querySelector('.expense-view');
-  historyEl.style.transform = `translateY(${y}px)`;
+function moveHistory(e) {
+  const accountHistory = document.querySelector('.account-history');
 
-  setTimeout(() => {
-    expenseView.style.height = `${viewHeight}px`;
-  }, delaySec * 1000);
+  // 2. 마우스가 움직이면 드래그 시작점과 현재 마우스 포인터 위치를 비교한다.
+  offset.x = e.clientX - initialMousePos.x;
+  offset.y = e.clientY - initialMousePos.y;
+
+  // 3. 드래그 시작점 - 현재 마우스 포인터 위치 -> 이동거리를 계산하여 transform 해준다.
+  accountHistory.style.transform = `translateY(${offset.y}px)`;
 }
 
 function createExpenseEl(dataArr, daysAgo = 0) {
